@@ -5,7 +5,7 @@ package session1.homework;
  */
 public class Exercise1 {
     public static void main(String[] args) {
-        //variable declaration
+        //declaration of variables
         String myName = "David";
         short myAge = 32;
         String myFavoriteColor = "Turquoise";
