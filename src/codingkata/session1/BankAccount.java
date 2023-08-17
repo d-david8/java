@@ -1,4 +1,4 @@
-package codingkata;
+package codingkata.session1;
 
 public class BankAccount {
     private String accountNumber;
