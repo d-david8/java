@@ -10,8 +10,6 @@ public class RandomParticipant {
         List<String> participants = new ArrayList<>();
         participants.add("Levi");
         participants.add("Tatiana");
-        participants.add("Adrian");
-        participants.add("Alexandra");
         participants.add("Titi");
         participants.add("Dragos");
 
