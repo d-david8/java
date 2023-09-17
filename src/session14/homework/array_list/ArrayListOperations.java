@@ -8,28 +8,34 @@ public class ArrayListOperations {
 
     public static void main(String[] args) {
         List<String> colors = createArrayListWithColors();
-//        iterateThroughArrayList(colors);
+        iterateThroughArrayList(colors);
 
-//        insertElementAtFirstPosition(colors, "Orange");
-//        System.out.println(retrieveElementAtIndex(colors, 0));
+        insertElementAtFirstPosition(colors, "Orange");
+        System.out.println(retrieveElementAtIndex(colors, 0));
 
-//        updateElementAtIndex(colors, 3, "Cyan");
-//        removeThirdElement(colors);
+        updateElementAtIndex(colors, 3, "Cyan");
+        removeThirdElement(colors);
 
-//        System.out.println(searchElementInArrayList(colors, "Green"));
-//        sortArrayList(colors);
+        System.out.println(searchElementInArrayList(colors, "Green"));
+        sortArrayList(colors);
 
-//        List<String> newArrayList = copyArrayList(colors);
-//        System.out.println(newArrayList);
+        List<String> newArrayList = copyArrayList(colors);
+        System.out.println(newArrayList);
 
-//        shuffleArrayList(colors);
-//        reverseArrayList(colors);
+        shuffleArrayList(colors);
+        reverseArrayList(colors);
 
-//        System.out.println(extractSubList(colors, 1, 4));
-//        System.out.println(compareArrayLists(colors, newArrayList));
+        System.out.println(getSubList(colors, 1, 3));
+        List<String> secondLis = new ArrayList<>(colors);
+        System.out.println(areEquals(colors, secondLis));
 
-//        swapElementsInArrayList(colors, 0, 2);
-        System.out.println(colors);
+        swapElements(colors, 3, 1);
+        System.out.println(joinArrayLists(colors, secondLis));
+
+        System.out.println(cloneArrayList(colors));
+        emptyArrayList(colors);
+        System.out.println(isArrayListEmpty(colors));
+        printArrayList(colors);
     }
 
     private static List<String> createArrayListWithColors() {
@@ -99,5 +105,43 @@ public class ArrayListOperations {
 
     public static void reverseArrayList(List<String> arrayList) {
         Collections.reverse(arrayList);
+    }
+
+    public static List<String> getSubList(List<String> list, int startIndex, int endIndex) {
+        if (startIndex < 0 || endIndex > list.size() || startIndex > endIndex) {
+            System.out.println("invalid indexes");
+            return new ArrayList<>();
+        }
+        return new ArrayList<>(list.subList(startIndex, endIndex));
+    }
+
+    public static boolean areEquals(List<String> firstList, List<String> seconList) {
+        return firstList.equals(seconList);
+    }
+
+    public static void swapElements(List<String> list, int index1, int index2) {
+        if (index1 < 0 || index1 >= list.size() || index2 < 0 || index2 >= list.size()) {
+            System.out.println("Invalid indexes.");
+        } else {
+            Collections.swap(list, index1, index2);
+        }
+    }
+
+    public static List<String> joinArrayLists(List<String> list1, List<String> list2) {
+        List<String> joinedList = new ArrayList<>(list1);
+        joinedList.addAll(list2);
+        return joinedList;
+    }
+
+    public static List<String> cloneArrayList(List<String> originalList) {
+        return new ArrayList<>(originalList);
+    }
+
+    public static void emptyArrayList(List<String> list) {
+        list.clear();
+    }
+
+    public static boolean isArrayListEmpty(List<String> list) {
+        return list.isEmpty();
     }
 }

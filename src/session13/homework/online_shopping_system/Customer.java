@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-class Customer {
+public class Customer {
     private String name;
     private String email;
     private String shippingAddress;
