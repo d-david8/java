@@ -1,0 +1,14 @@
+<bookstore>
+    <book>
+        <isbn>123-456-789</isbn>
+        <title>The Great Adventure</title>
+        <author>John Doe</author>
+        <price>19.99</price>
+    </book>
+    <book>
+        <isbn>789-101-112</isbn>
+        <title>Java Essentials</title>
+        <author>Jane Doe</author>
+        <price>29.99</price>
+    </book>
+</bookstore>

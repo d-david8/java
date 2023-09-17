@@ -1,6 +1,6 @@
 package session13.homework.online_shopping_system;
 
-class Product {
+public class Product {
     private String name;
     private String description;
     private double price;

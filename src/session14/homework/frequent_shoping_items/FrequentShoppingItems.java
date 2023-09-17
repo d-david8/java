@@ -1,23 +1,77 @@
 package session14.homework.frequent_shoping_items;
 
-import session13.homework.online_shopping_system.*;
+import java.util.*;
+
 public class FrequentShoppingItems {
 
     public static void main(String[] args) {
-        Product product1 = new Product("Product 1", "Description of product 1", 1, 3);
-        Product product2 = new Product("Product 2", "Description of product 2", 2, 5);
-        Product product3 = new Product("Product 3", "Description of product 3", 2, 5);
+        List<ShoppingCart> orders = generateShoppingCarts();
+        int k = 3;
 
-        Customer customer1 = new Customer("Dan", "dan@email.com", "Cetatii 322", "Dorobantilor 36");
-
-        //adding products to the customer 1 shopping cart
-        customer1.addToCart(product1, 1);
-        customer1.addToCart(product2, 3);
-        customer1.addToCart(product1, 1);
-        customer1.addToCart(product3, 1);
-
-        int orderNumber = customer1.placeOrder();
-
+        System.out.println(retrieveProductsWithAppearance(orders));
+        System.out.println(findTopKPoducts(k, retrieveProductsWithAppearance(orders)));
     }
 
+    private static List<ShoppingCart> generateShoppingCarts() {
+        List<ShoppingCart> carts = new ArrayList<>();
+
+        ShoppingCart shoppingCart1 = new ShoppingCart();
+        shoppingCart1.addProduct("P1");
+        shoppingCart1.addProduct("P2");
+        shoppingCart1.addProduct("P2");
+        shoppingCart1.addProduct("P3");
+        shoppingCart1.addProduct("P2");
+        carts.add(shoppingCart1);
+
+        ShoppingCart shoppingCart2 = new ShoppingCart();
+        shoppingCart2.addProduct("P1");
+        shoppingCart2.addProduct("P2");
+        shoppingCart2.addProduct("P3");
+        shoppingCart2.addProduct("P4");
+        shoppingCart2.addProduct("P4");
+        shoppingCart2.addProduct("P4");
+        shoppingCart2.addProduct("P4");
+        shoppingCart2.addProduct("P4");
+        shoppingCart2.addProduct("P4");
+
+        carts.add(shoppingCart2);
+
+        return carts;
+    }
+
+    public static Map<String, Integer> retrieveProductsWithAppearance(List<ShoppingCart> shoppingCarts) {
+        Map<String, Integer> allProducts = new HashMap<>();
+        for (ShoppingCart shoppingCart : shoppingCarts) {
+            for (String product : shoppingCart.getProducts()) {
+                allProducts.put(product, allProducts.getOrDefault(product, 0) + 1);
+            }
+        }
+        return allProducts;
+    }
+
+    public static Map<String, Integer> findTopKPoducts(int k, Map<String, Integer> products) {
+        Map<String, Integer> topK = new HashMap<>();
+        int minApareance = Integer.MAX_VALUE;
+        String minProduct = "xxxx";
+        for (Map.Entry product : products.entrySet()) {
+            System.out.println(minApareance);
+            if (k > 0) {
+                if (minApareance > (int) product.getValue()) {
+                    minApareance = (Integer) product.getValue();
+                    minProduct = (String) product.getKey();
+                }
+                topK.put((String) product.getKey(), (Integer) product.getValue());
+
+            } else {
+                if (minApareance < (int) product.getValue()) {
+                    topK.remove(minProduct);
+                    minApareance = (Integer) product.getValue();
+                    minProduct = (String) product.getKey();
+                    topK.put((String) product.getKey(), (Integer) product.getValue());
+                }
+            }
+            k--;
+        }
+        return topK;
+    }
 }

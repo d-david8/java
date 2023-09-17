@@ -3,7 +3,7 @@ package session13.homework.online_shopping_system;
 import java.util.HashMap;
 import java.util.Map;
 
-class Order {
+public class Order {
     private static int ordersCount = 0;
     private final int orderNumber;
     private final Customer customer;
@@ -56,5 +56,9 @@ class Order {
                 "Order details:\n" +
                 "Order number: " + orderNumber + "\n" +
                 "Order status: " + orderStatus + "\n";
+    }
+
+    public Map<Product, Integer> getProducts() {
+        return products;
     }
 }
