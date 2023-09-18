@@ -4,6 +4,7 @@ target/
 !/src/main//target/
 !/src/test//target/
 out/production
+lib
 
 STS
 .apt_generated
