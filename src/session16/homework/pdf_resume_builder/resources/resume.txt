@@ -1,0 +1,27 @@
+Personal Information:
+Name: John Doe
+Address: 123 Main St, Hometown, USA
+Phone Number: 123-456-7890
+Email: john.doe@example.com
+
+Objective:
+To leverage my 5 years of experience in Java development and problem-solving skills in a senior developer role,
+contributing to team successes through hard work and collaboration.
+
+Education:
+University Name: ABC University
+Degree: Bachelor of Science in Computer Science
+Graduation Date: May 2020
+
+Work Experience:
+Company Name: XYZ Corp
+Job Title: Software Developer
+Job Description: Developed and maintained Java applications, collaborating with cross-functional
+teams to drive project successes.
+Duration: June 2020 - Present
+
+Skills:
+- Java Programming
+- Project Management
+Agile Methodologies
+Communication Skills
