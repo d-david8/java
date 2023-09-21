@@ -2,6 +2,7 @@ package session16.homework.lambda_exercises;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.function.Predicate;
 
@@ -34,5 +35,8 @@ public class ListFilterGenericsTest {
 
         List<Object> stringList = List.of("Alice", "John", "Anna", "David", "Bob");
         System.out.println(filterGenerics.filter(stringList, stringFilter));
+
     }
+
+
 }
