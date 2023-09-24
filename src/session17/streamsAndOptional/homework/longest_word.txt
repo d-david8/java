@@ -1,0 +1,19 @@
+Methods:
+
+Using File.readString() method
+Using readLine() method of BufferReader class
+Using File.readAllBytes() method
+Using File.lines() method
+Using Scanner class
+Let us discuss each of them by implementing clean java programs in order to understand them.
+
+Method 1: Using File.readString() method
+
+The readString() method of File Class in Java is used to read contents to the specified file.
+
+Syntax:
+
+Files.readString(filePath) ;
+Parameters: File path with data type as Path
+
+Return Value: This method returns the content of the file in String format.
