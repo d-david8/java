@@ -5,13 +5,14 @@ import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class FileReader {
-    public static List<String> readFile(String fileName) {
+    public static String readFile(String fileName) {
 
         List<String> lines = new LinkedList<>();
         try {
-            File file = new File("/Users/david/java/src/session16/homework/pdf_resume_builder/resources/" + fileName);
+            File file = new File("/Users/david/java/src/session16_lambdaAndFunctionalInterfaces/homework/pdf_resume_builder/resources/" + fileName);
             Scanner scanner = new Scanner(file);
             while (scanner.hasNext()) {
                 lines.add(scanner.nextLine());
@@ -19,6 +20,6 @@ public class FileReader {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return lines;
+        return lines.stream().collect(Collectors.joining("\n"));
     }
 }

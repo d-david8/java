@@ -13,15 +13,25 @@ University Name: ABC University
 Degree: Bachelor of Science in Computer Science
 Graduation Date: May 2020
 
+University Name: XXX University
+Degree: Bachelor of Science in Computer Science
+Graduation Date: May 2012
+
 Work Experience:
 Company Name: XYZ Corp
 Job Title: Software Developer
-Job Description: Developed and maintained Java applications, collaborating with cross-functional
-teams to drive project successes.
+Job Description: Developed and maintained Java applications, collaborating with cross-functional teams to drive project successes.
 Duration: June 2020 - Present
+
+Company Name: AAA Corp
+Job Title: Developer
+Job Description: Collaborating with cross-functional teams to drive project successes.
+Duration: June 2012 - 2020
 
 Skills:
 - Java Programming
 - Project Management
-Agile Methodologies
-Communication Skills
+- Agile Methodologies
+- Communication Skills
+
+.
